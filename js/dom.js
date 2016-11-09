@@ -6,13 +6,29 @@
 
 var Acme = (function (Acme) {
 
+  Acme.listenToPage = function () {
+    $("#menu").on('change', function() {
+      // pass category to show
+      switch($(this).val()) {
+        case "fireworks": Acme.showItems(0); break;
+        case "demolition": Acme.showItems(1); break;
+      }
+    });
+  };
 
-Acme.listenToPage = function () {
-  console.log("listening");
-  let test = Acme.getData();
-  console.log("data appear here?", test);
-};
+  Acme.showItems = function (data) {
+    let dataToShow = [];
+
+    console.log("Category to show:", data);
+
+    let test = Acme.getData();
+    console.log("all data:", test);
+    console.log("products:", test.products);
+    console.log("dataToShow:", dataToShow);
+
+  };
 
 return Acme;
 
 })(Acme || {});
+

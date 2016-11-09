@@ -47,7 +47,7 @@ Acme.parseData = function (arrayOfData) {
     allData = {
       "categories": arrayOfData[0].categories,
       "types": arrayOfData[1].types,
-      "products": arrayOfData[2].products
+      "products": arrayOfData[2].products[0]
     };
 
     // After Data is pushed, setup listeners on page
