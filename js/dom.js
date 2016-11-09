@@ -40,11 +40,17 @@ var Acme = (function (Acme) {
 
     // Build HTML to push to page
     for (var i = 0; i < dataToShow.length; i++) {
+      let prodType = dataToShow[i].typeId;
+      console.log("prod type string:", data.types);
+      let catType = 10;
+
       htmlString += `
        <div class="col-md-4" >
           <div class="card">
             <h2>${dataToShow[i].name}</h2>
             <p>${dataToShow[i].description}</p>
+            <h3>Product Type: ${prodType}</h3>
+            <h3>Product Category: ${catType}</h3>
           </div>
         </div>
     `;
