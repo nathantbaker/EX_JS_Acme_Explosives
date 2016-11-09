@@ -11,14 +11,30 @@
   <body>
     <div class="container">
 
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Acme Explosive</h1>
+        <div class="row">
+          <div class="col-md-12">
+
+            <h1>Acme Explosive</h1>
+            <p>View products by category.</p>
+
+            <select class="form-control" id="menu">
+              <option>SELECT A CATEGORY</option>
+              <option value="fireworks">Fireworks</option>
+              <option value="demolition">Demolition</option>
+            </select>
+
+          </div>
         </div>
-      </div>
 
     </div>
+
+    <div class="container products">
+      <div class="row" id="showData">
+      </div>
+    </div>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/dom.js"></script>
   </body>
 </html>
