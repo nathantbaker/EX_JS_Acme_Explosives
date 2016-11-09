@@ -16,14 +16,44 @@ var Acme = (function (Acme) {
     });
   };
 
-  Acme.showItems = function (data) {
-    let dataToShow = [];
+  Acme.showItems = function (targetCat) {
+    let dataToShow = [],
+        data = Acme.getData(),
+        acceptedTypes = [],
+        htmlString = "";
 
-    console.log("Category to show:", data);
+    // Populate acceptedTypes array with type ids if they match correct category
+    for (let i = 0; i < Object.keys(data.types).length; i++) {
+      let type = data.types[Object.keys(data.types)[i]];
+      if (type.categoryId === targetCat) {
+        acceptedTypes.push(type.id);
+      }
+    }
 
-    let test = Acme.getData();
-    console.log("all data:", test);
-    console.log("products:", test.products);
+    // Populate dataToShow array with products if they have an accepted type
+    for (let i = 0; i < Object.keys(data.products).length; i++) {
+      let product = data.products[Object.keys(data.products)[i]];
+      if ($.inArray(product.typeId, acceptedTypes) !== -1) {
+        dataToShow.push(product);
+      }
+    }
+
+    // Build HTML to push to page
+    for (var i = 0; i < dataToShow.length; i++) {
+      htmlString += `
+       <div class="col-md-4" >
+          <div class="card">
+            <h2>${dataToShow[i].name}</h2>
+            <p>${dataToShow[i].description}</p>
+          </div>
+        </div>
+    `;
+    }
+
+    // Push HTML to page
+    targetEl = $("#showData");
+    targetEl.empty();
+    targetEl.append(htmlString);
     console.log("dataToShow:", dataToShow);
 
   };
