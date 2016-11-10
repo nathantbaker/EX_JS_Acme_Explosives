@@ -3,27 +3,110 @@
     "fairy_sparklers": {
         "id": 0,
         "typeId": 0,
-        "name": "Fairy Sparklers",
+        "name": "Yellow Fairy Sparklers",
         "description": "Multi-colored sparklers that are safe for any age."
     },
     "dy_no_mite": {
       "id": 1,
       "typeId": 3,
-      "name": "Dy-No-Mite!",
+      "name": "Dy-No-Mitey Much",
       "description": "Sticks of boom. Necessary for any attempts to build a road or kill a road runner."
     },
     "oooh_maker": {
       "id": 2,
       "typeId": 1,
-      "name": "The Oooh Maker",
+      "name": "The Oooh What? Maker",
       "description": "Sizzles, sparkles, and kapows its way into every patriotic heart"
     },
     "charred_stump": {
       "id": 3,
       "typeId": 2,
-      "name": "The Charred Stump",
+      "name": "On Sale Charred Stump",
       "description": "Extremely short fuse and enough gunpowder to launch a cannonball"
+    },
+    "Cool product": {
+        "id": 4,
+        "typeId": 4,
+        "name": "Bluish Fairy Sparklers",
+        "description": "Multi-colored sparklers that are safe for any age."
+    },
+    "Buster": {
+      "id": 5,
+      "typeId": 5,
+      "name": "Dy-No-Mite! Livin' The Dream",
+      "description": "Sticks of boom. Necessary for any attempts to build a road or kill a road runner."
+    },
+    "Mr. James": {
+      "id": 6,
+      "typeId": 0,
+      "name": "What is a Oooh Maker?",
+      "description": "Sizzles, sparkles, and kapows its way into every patriotic heart"
+    },
+    "Live Free": {
+      "id": 7,
+      "typeId": 1,
+      "name": "Sit on This Charred Stump",
+      "description": "Extremely short fuse and enough gunpowder to launch a cannonball"
+    },
+    "Really Cool product": {
+        "id": 8,
+        "typeId": 2,
+        "name": "Green Fairy Sparklers",
+        "description": "Multi-colored sparklers that are safe for any age."
+    },
+    "Buster Major": {
+      "id": 9,
+      "typeId": 3,
+      "name": "Dy-No-Mite! Jr.",
+      "description": "Sticks of boom. Necessary for any attempts to build a road or kill a road runner."
+    },
+    "Super Mr. James": {
+      "id": 10,
+      "typeId": 4,
+      "name": "The Oooh-Ooh Myyy Maker",
+      "description": "Sizzles, sparkles, and kapows its way into every patriotic heart"
+    },
+    "Live Free Dude": {
+      "id": 11,
+      "typeId": 5,
+      "name": "The Charred Stump Remix",
+      "description": "Extremely short fuse and enough gunpowder to launch a cannonball"
+    },
+      "Super fairy_sparklers": {
+        "id": 12,
+        "typeId": 0,
+        "name": "Lame Fairy Sparklers",
+        "description": "Multi-colored sparklers that are safe for any age."
+    },
+      "Super DUUPER fairy_sparklers": {
+        "id": 13,
+        "typeId": 3,
+        "name": "Purple Fairy Sparklers",
+        "description": "Multi-colored sparklers that are safe for any age."
+    },
+      "super oooh_maker": {
+      "id": 14,
+      "typeId": 1,
+      "name": "The Best Oooh Maker",
+      "description": "Sizzles, sparkles, and kapows its way into every patriotic heart"
+    },
+    "super charred_stump": {
+      "id": 15,
+      "typeId": 2,
+      "name": "The Only Charred Stump",
+      "description": "Extremely short fuse and enough gunpowder to launch a cannonball"
+    },
+    "Suuuupppper Cool product": {
+        "id": 16,
+        "typeId": 4,
+        "name": "Blue Fairy Sparklers",
+        "description": "Multi-colored sparklers that are safe for any age."
+    },
+    "Mrs. Buster": {
+      "id": 17,
+      "typeId": 5,
+      "name": "Mrs. Dy-No-Mite!",
+      "description": "Sticks of boom. Necessary for any attempts to build a road or kill a road runner."
     }
-
   }]
 }

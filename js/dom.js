@@ -1,32 +1,29 @@
-// ### User interface
+var Acme = ( Acme => {
 
-// Create a simple user interface for your product catalog where a user can select a category from a dropdown. When a category is selected, you must use Promises to read, first, from the `categories.json` to load that array of objects, then load `types.json`, then `products.json`.
-
-// Once all data is loaded, you need to display the products in a Bootstrap grid. Each product must display the string name of its product type, and product category. Not the integer id value.
-
-var Acme = (function (Acme) {
-
-  Acme.listenToPage = function () {
+  Acme.listenToPage = () => {
     $("#menu").on('change', function() {
-      // pass category to show
+      // build HMTL based on category selected
       switch($(this).val()) {
-        case "fireworks": Acme.showItems(0); break;
-        case "demolition": Acme.showItems(1); break;
+        case "fireworks": Acme.showItems(0, "Fireworks"); break;
+        case "demolition": Acme.showItems(1, "Demolition"); break;
       }
     });
   };
 
-  Acme.showItems = function (targetCat) {
-    let dataToShow = [],
-        data = Acme.getData(),
+  Acme.showItems = (catId, catString) => {
+    let data = Acme.getData(),
         acceptedTypes = [],
+        dataToShow = [],
+        typeKey = {},
         htmlString = "";
 
     // Populate acceptedTypes array with type ids if they match correct category
     for (let i = 0; i < Object.keys(data.types).length; i++) {
       let type = data.types[Object.keys(data.types)[i]];
-      if (type.categoryId === targetCat) {
+      if (type.categoryId === catId) {
         acceptedTypes.push(type.id);
+        // reference type id's with names in easy to grab place
+        typeKey[i] = { "typeid": type.id, "typename": type.name };
       }
     }
 
@@ -39,28 +36,26 @@ var Acme = (function (Acme) {
     }
 
     // Build HTML to push to page
-    for (var i = 0; i < dataToShow.length; i++) {
-      let prodType = dataToShow[i].typeId;
-      console.log("prod type string:", data.types);
-      let catType = 10;
+    for (let i = 0; i < dataToShow.length; i++) {
+      let prodTypeNumber = dataToShow[i].typeId;
+      let prodString = typeKey[prodTypeNumber].typename;
 
       htmlString += `
        <div class="col-md-4" >
           <div class="card">
             <h2>${dataToShow[i].name}</h2>
             <p>${dataToShow[i].description}</p>
-            <h3>Product Type: ${prodType}</h3>
-            <h3>Product Category: ${catType}</h3>
+            <h3>Product Category:</h3> ${catString}
+            <h3>Product Type:</h3> ${prodString}
           </div>
         </div>
-    `;
+      `;
     }
 
     // Push HTML to page
     targetEl = $("#showData");
-    targetEl.empty();
+    targetEl.empty(); // clear page of results before adding new results
     targetEl.append(htmlString);
-    console.log("dataToShow:", dataToShow);
 
   };
 

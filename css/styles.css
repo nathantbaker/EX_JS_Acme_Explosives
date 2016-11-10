@@ -3,8 +3,6 @@
    Author:  Nathan T. Baker
    ============================================================ */
 
-/* ===GLOBAL=== */
-
 body {
   background-color: #ddd;
 }
@@ -25,15 +23,21 @@ body {
   border: none;
   box-shadow: none;
   max-width: 800px;
-
 }
 
 .card {
   background: white;
   padding: 10px;
   border-radius: 10px;
-  min-height: 200px;
+  min-height: 250px;
   margin: 30px 0;
+}
+
+h1 {
+  background: url('../images/bomb.svg') left top no-repeat;
+  background-size: 40px;
+  line-height: 1.3em;
+  padding-left: 45px;
 }
 
 h2 {
@@ -48,8 +52,3 @@ h3 {
   padding: 5px 0;
   color: green;
 }
-
-/* ===PRIMARY=== */
-/* ===HEADER=== */
-/* ===SIDEBAR=== */
-/* ===FOOTER=== */
